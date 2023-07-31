@@ -16,8 +16,6 @@ import streamlit as st
 # pridam obrazok
 from PIL import Image
 
-import sklearn
-
 # otvorenie
 image = Image.open('isp_pic2.PNG')
 
