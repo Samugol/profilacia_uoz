@@ -541,7 +541,7 @@ if ok2:
        'dlzka_doh' : dlzka_doh,
        'dlzka_dieta' : dlzka_dieta}
     # pripojim do dataframe
-    pd.concat([df, df_my], axis = 1)
+    df = pd.concat([df_my,df.loc[:]]).reset_index(drop=True)
     # nazvy kategorickych, binarnych a numerickych premennych
     vars_cat = df.loc[:,['trv_bydlisko', 'vzdelanie', 'skola_odbor', 'rodinny_stav', 'dov_zaradenia', 'predch_zam_nace', 
                           'predch_zam_isco', 'mes_zaradenia']].columns.tolist()
