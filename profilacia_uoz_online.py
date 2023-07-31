@@ -16,6 +16,7 @@ import streamlit as st
 # pridam obrazok
 from PIL import Image
 
+# musel som pridat sklearn lebo inak hlasilo error aj ked to pred tym nepotrebovalo
 import sklearn
 
 # otvorenie
@@ -542,7 +543,7 @@ if ok2:
        'dlzka_zec' : dlzka_zec,
        'dlzka_doh' : dlzka_doh,
        'dlzka_dieta' : dlzka_dieta}
-    # pripojim do dataframe
+    # pripojim do dataframe - toto je ale iny sposob lebo "append" je deprecated a bol odstraneny 
     df = pd.concat([df, pd.DataFrame.from_records([df_my])])
     # nazvy kategorickych, binarnych a numerickych premennych
     vars_cat = df.loc[:,['trv_bydlisko', 'vzdelanie', 'skola_odbor', 'rodinny_stav', 'dov_zaradenia', 'predch_zam_nace', 
