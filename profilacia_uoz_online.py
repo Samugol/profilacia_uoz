@@ -500,7 +500,7 @@ ok2 = st.button("Spustiť profiláciu")
 
 #nacitam svoje premenne
 if ok2:
-    df_my = {'vek' : vek,
+    df_my = pd.DataFrame({'vek' : vek,
        'pohl_zena' : pohl_zena,
        'trv_bydlisko' : trv_bydlisko,
        'vzdelanie' : vzdelanie,
@@ -539,7 +539,7 @@ if ok2:
        'vz_doh' : vz_doh,
        'dlzka_zec' : dlzka_zec,
        'dlzka_doh' : dlzka_doh,
-       'dlzka_dieta' : dlzka_dieta}
+       'dlzka_dieta' : dlzka_dieta})
     # pripojim do dataframe
     df = pd.concat([df_my,df.loc[:]]).reset_index(drop=True)
     # nazvy kategorickych, binarnych a numerickych premennych
